@@ -99,9 +99,9 @@ const todosSlice = createSlice({
     })
     .addCase(deleteTodo.fulfilled, (state, action) => {
       const todoId = action.meta.arg
-      const deletePostIndex = state.todos.findIndex((todo) => todo.id === todoId)
-      if (deletePostIndex !== -1) {
-        state.todos.splice(deletePostIndex, 1)
+      const deleteTodoIndex = state.todos.findIndex((todo) => todo.id === todoId)
+      if (deleteTodoIndex !== -1) {
+        state.todos.splice(deleteTodoIndex, 1)
       }
     })
   },
